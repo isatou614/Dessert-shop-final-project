@@ -1,39 +1,186 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-[#fff7f3]">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dessert Shop | Home</title>
-  <link rel="stylesheet" href="./src/style.css" />
-  <style>
-    body {
-      font-family: 'Red Hat Text', sans-serif;
-      background-image: url('/assets/images/bg-dessert-pattern.jpg'); 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+<html lang="en" class="bg-[#fdf8f5]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dessert Shop | Product List with Cart</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      body {
+        font-family: 'Red Hat Text', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="text-base text-rose-900 bg-[#fdf8f5]">
+    <div class="max-w-7xl mx-auto p-4 sm:p-8">
+      <header class="mb-10">
+        <h1 class="text-3xl sm:text-5xl font-bold mb-2">Desserts</h1>
+        <p class="text-rose-500">Select your favorite treats below.</p>
+      </header>
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeIn {
-      animation: fadeIn 1s ease-out forwards;
-    }
-  </style>
-</head>
-<body class="flex items-center justify-center min-h-screen bg-[#fff7f3]/80 text-rose-900">
+      <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
+        <!-- Product Grid -->
+        <section id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+         
+          <!-- 1. Waffle -->
+          <div class="relative">
+            <img src="/assets/images/image-waffle-thumbnail.jpg" alt="Waffle with Berries" class="rounded-lg w-full h-48 object-cover mb-4" />
+              <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+               <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+               Add to Cart
+             </button>  
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Waffle</h3>
+              <p class="text-lg font-semibold text-rose-900">Waffle with Berries</p>
+              <p class="text-[16px] text-rose-700 font-bold">$6.50</p>
+            </div>
+          </div>
 
-  <div class="text-center space-y-6 animate-fadeIn bg-white/80 p-8 rounded-xl shadow-lg backdrop-blur-sm">
-    <img src="/assets/images/main-logo.jpeg" alt="Dessert Logo" class="w-20 h-20 mx-auto rounded-full shadow" />
-    <h1 class="text-4xl font-bold">Welcome to the Dessert Shop</h1>
-    <p class="text-sm text-rose-500">Delight in every bite. Order your favorite desserts.</p>
-    
-    <a href="./src/shop.html" class="inline-block bg-rose-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-rose-800 transition shadow">
-      Enter Shop
-    </a>
+          <!-- 2. Crème Brûlée -->
+          <div class="relative">
+            <img src="/assets/images/image-creme-brulee-desktop.jpg" alt="Vanilla Bean Crème Brûlée" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Crème Brûlée</h3>
+              <p class="text-lg font-semibold text-rose-900">Vanilla Bean Crème Brûlée</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$7.00</p>
+            </div>
+            
+          </div>
+
+          <!-- 3. Macaron -->
+          <div class="relative">
+            <img src="/assets/images/image-macaron-thumbnail.jpg" alt="Macaron Mix" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Macaron</h3>
+              <p class="text-lg font-semibold text-rose-900">Macaron Mix of Five</p>
+              <p class="text-[16px] text-rose-700 font-bold">$8.00</p>
+            </div> 
+            
+              
+          </div>
+
+          <!-- 4. Tiramisu -->
+          <div class="relative">
+            <img src="/assets/images/image-tiramisu-desktop.jpg" alt="Classic Tiramisu" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Tiramisu</h3>
+              <p class="text-lg font-semibold text-rose-900">Classic Tiramisu</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$5.50</p>
+           
+            </div>
+          </div>
+
+          <!-- 5. Baklava -->
+          <div class="relative">
+            <img src="/assets/images/image-baklava-desktop.jpg" alt="Pistachio Baklava" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Baklava</h3>
+              <p class="text-lg font-semibold text-rose-900">Pistachio Baklava</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$4.00</p>
+            </div>
+          </div>
+
+          <!-- 6. Lemon Pie -->
+          <div class="relative">
+            <img src="/assets/images/image-meringue-desktop.jpg" alt="Lemon Meringue Pie" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div>
+              <h3 class="text-sm text-rose-400 font-medium">Pie</h3>
+              <p class="text-lg font-semibold text-rose-900">Lemon Meringue Pie</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$5.00</p>
+            </div>
+           
+          </div>
+
+          <!-- 7. Red Velvet Cake -->
+          <div class="relative">
+            <img src="/assets/images/image-cake-desktop.jpg" alt="Red Velvet Cake" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button>
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Cake</h3>
+              <p class="text-lg font-semibold text-rose-900">Red Velvet Cake</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$4.50</p>
+            </div>
+          </div>
+
+          <!-- 8. Brownie -->
+          <div class="relative">
+            <img src="/assets/images/image-brownie-desktop.jpg" alt="Salted Caramel Brownie" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Brownie</h3>
+              <p class="text-lg font-semibold text-rose-900">Salted Caramel Brownie</p>
+              <p class="text-[16px] text-rose-700 font-bold mb-4">$5.50</p>
+            </div>
+           
+          </div>
+
+          <!-- 9. Vanilla Panna Cotta -->
+          <div class="relative">
+            <img src="/assets/images/image-panna-cotta-thumbnail.jpg" alt="Vanilla Panna Cotta" class="rounded-lg w-full h-48 object-cover mb-4" />
+            <button class=" bg-white w-3/4 flex items-center absolute bottom-28 left-8 justify-center gap-2 text-sm font-semibold text-rose-900 py-2 border border-rose-300 rounded-full hover:bg-rose-100 transition cursor-pointer">
+              <img src="/assets/images/icon-add-to-cart.svg" alt="" class="w-4 h-4" />
+              Add to Cart
+            </button> 
+            <div class="mt-10">
+              <h3 class="text-sm text-rose-400 font-medium">Panna Cotta</h3>
+            <p class="text-lg font-semibold text-rose-900">Vanilla Panna Cotta</p>
+            <p class="text-[16px] text-rose-700 font-bold mb-4">$6.50</p>
+            </div>
+          
+          </div>
+        </section>
+
+        <!-- Cart Sidebar Placeholder -->
+        <aside class="bg-white rounded-xl p-6 shadow border border-rose-100 flex flex-col items-center justify-center h-fit">
+          <h2 class="text-xl font-bold text-rose-900 mb-4">Your Cart (0)</h2>
+          <img src="/assets/images/illustration-empty-cart.svg" alt="Empty cart" class="w-24 h-24 mb-4" />
+          <p class="text-sm text-rose-400 text-center">Your added items will appear here</p>
+        </aside>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  <!-- Order Confirmation Modal -->
+<!-- Order Confirmation Modal -->
+<div id="orderModal" class="fixed inset-0 bg-black/40 backdrop-md flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl w-full max-w-md p-6 text-center shadow-lg">
+    <div class="text-green-500 text-3xl mb-2">
+      <img src="/assets/images/icon-order-confirmed.svg" alt="">
+    </div>
+    <h2 class="text-left text-xl font-bold mb-1 drop-shadow-amber-950">Order Confirmed</h2>
+    <p class="text-sm text-left text-gray-500 mb-4">We hope you enjoy your food!</p>
+    <div id="orderSummary" class="text-left text-sm mb-4"></div>
+    <div class="text-right font-bold text-lg mb-4" id="orderTotal"></div>
+    <button id="newOrderBtn" class="bg-rose-700 text-white px-4 py-2 rounded w-full">Start New Order</button>
   </div>
-
-</body>
-</html> 
+</div>
+  </body>
+</html>
